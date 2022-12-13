@@ -50,6 +50,7 @@ internal class EventRoutes
     internal async Task<IResult> CreateEvent(EventModel model, IValidator<EventModel> validator, EventsService eventsService, HttpContext ctx)
     {
         var userId = ctx.User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value;
+        var userName = ctx.User.Claims.First(x => x.Type == ClaimTypes.Name).Value;
         model.UserId = userId;
         var validationResult = await validator.ValidateAsync(model);
 
@@ -60,12 +61,19 @@ internal class EventRoutes
 
         await eventsService.CreateAsync(model);
 
+        var resultEvent = new EventModelView(model);
+        
+        resultEvent.User = new UserDisplayView {
+            Id = userId, 
+            Name = userName
+        };
+
         return Results.Json(
             new
             {
                 ok = true,
                 message = "createEvent",
-                model = model
+                model = resultEvent
             }
         );
     }
@@ -108,6 +116,7 @@ internal class EventRoutes
     {
         var ev = await eventsService.GetAsync(id);
         var userId = ctx.User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value;
+        var userName = ctx.User.Claims.First(x => x.Type == ClaimTypes.Name).Value;
 
         if (ev == null){
             return Results.BadRequest(
@@ -132,11 +141,17 @@ internal class EventRoutes
         inputEvent.Id = id;
         var updatedEvent = await eventsService.UpdateAsync(id, inputEvent);
 
+        var resultEvent = new EventModelView(updatedEvent);
+        resultEvent.User = new UserDisplayView {
+            Id = userId, 
+            Name = userName
+        };
+
         return Results.Json(
             new
             {
                 ok = true,
-                model = updatedEvent
+                model = resultEvent
             }
         );
     }

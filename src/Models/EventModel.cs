@@ -14,10 +14,10 @@ public class EventModel
     public string Title { get; set; } = null!;
     public string Notes { get; set; } = null!;
 
-    [JsonConverter(typeof(UnixEpochDateTimeConverter))]
+    // [JsonConverter(typeof(UnixEpochDateTimeConverter))]
     public DateTime? Start { get; set; }
 
-    [JsonConverter(typeof(UnixEpochDateTimeConverter))]
+    // [JsonConverter(typeof(UnixEpochDateTimeConverter))]
     public DateTime? End { get; set; }
 
     [BsonElement("user"), JsonPropertyName("user")]
@@ -29,16 +29,27 @@ public class EventModel
 [BsonIgnoreExtraElements]
 public class EventModelView 
 {
+
+    public EventModelView(){}
+
+    public EventModelView(EventModel from){
+        this.Id = from.Id;
+        this.Title = from.Title;
+        this.Notes = from.Notes;
+        this.Start = from.Start;
+        this.End = from.End;
+    }
+
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string Id { get; set; } = null!;
     public string Title { get; set; } = null!;
     public string Notes { get; set; } = null!;
 
-    [JsonConverter(typeof(UnixEpochDateTimeConverter))]
+    // [JsonConverter(typeof(UnixEpochDateTimeConverter))]
     public DateTime? Start { get; set; }
 
-    [JsonConverter(typeof(UnixEpochDateTimeConverter))]
+    // [JsonConverter(typeof(UnixEpochDateTimeConverter))]
     public DateTime? End { get; set; }
 
     [BsonElement("user"), JsonPropertyName("user")]

@@ -20,7 +20,7 @@ public class UsersService
         var db = client.GetDatabase(settings.DatabaseName);
         this.userCollection = db.GetCollection<UserModel>(settings.UserCollectionsName);
         var options = new CreateIndexOptions() { Unique = true };
-        var field = new StringFieldDefinition<UserModel>("Email");
+        var field = new StringFieldDefinition<UserModel>("email");
         var indexDefinition = new IndexKeysDefinitionBuilder<UserModel>().Ascending(field);
         var indexModel = new CreateIndexModel<UserModel>(indexDefinition, options);
         userCollection.Indexes.CreateOne(indexModel);

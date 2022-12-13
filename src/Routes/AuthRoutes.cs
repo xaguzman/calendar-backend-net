@@ -129,6 +129,8 @@ internal class AuthRoutes
             new
             {
                 ok = true,
+                uid= uid,
+                name= user!.Name,
                 token = jwt
             }
         );

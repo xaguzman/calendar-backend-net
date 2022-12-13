@@ -39,17 +39,17 @@ builder.Services.AddAuthentication().AddJwtBearer(o =>
 
 builder.Services.AddAuthorizationBuilder().AddPolicy("user_logged", policy => policy.RequireClaim("uid"));
 
-builder.Services.AddCors();
-// builder.Services.AddCors(o =>
-// {
-//     o.AddPolicy("EnableCORS", builder => builder
-//             // .AllowAnyOrigin()
-//             // .AllowAnyHeader()
-//             // .AllowAnyMethod()
-//             // .AllowCredentials()
-//             .WithOrigins("https://localhost:5000", "https://localhost:3000")
-//         );
-// });
+// builder.Services.AddCors();
+builder.Services.AddCors(o =>
+{
+    o.AddPolicy("EnableCORS", builder => builder
+            // .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials()
+            .WithOrigins("http://localhost:5000", "http://localhost:3000")
+        );
+});
 
 var app = builder.Build();
 
@@ -59,13 +59,8 @@ ConventionRegistry.Register("camelCase", convention, t => true);
 
 app.MapApi();
 
-
-// TODO: CRUD: Eventos
-
-app.UseCors();
+app.UseCors("EnableCORS");
 app.UseAuthentication();
 app.UseAuthorization();
 
-// var port = Environment.GetEnvironmentVariable("PORT") ?? "4000";
-// app.Run($"http://localhost:{port}");
 app.Run();

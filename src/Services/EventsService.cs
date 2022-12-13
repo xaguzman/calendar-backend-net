@@ -17,11 +17,9 @@ public class EventsService
     {
         var settings = dbSettings.Value;
 
-        Console.WriteLine("CS: " + dbSettings.Value.ConnectionString);
         var client = new MongoClient(settings.ConnectionString);
         var db = client.GetDatabase(settings.DatabaseName);
         this.eventCollection = db.GetCollection<EventModel>(settings.EventCollectionsName);
-        // this.eventViewCollection = db.GetCollection<EventModelView>(settings.EventCollectionsName);
     }
 
     public async Task<List<EventModel>> GetAllAsync() => await GetAllAsync(_ => true);
