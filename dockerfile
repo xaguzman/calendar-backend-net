@@ -15,4 +15,5 @@ RUN dotnet publish -c Release -o /app --use-current-runtime --self-contained fal
 FROM mcr.microsoft.com/dotnet/aspnet:7.0-alpine
 WORKDIR /app
 COPY --from=build /app .
-ENTRYPOINT ["dotnet", "calendar-backend-net.dll"]
+# ENTRYPOINT ["dotnet", "calendar-backend-net.dll"]
+CMD ["dotnet", "calendar-backend-net.dll"]
