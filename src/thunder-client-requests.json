@@ -18,7 +18,7 @@
             "headers": [
                 {
                     "name": "Authorization",
-                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MzkxN2UyNjU3MTkyM2RhMDg4ZGRhOWIiLCJuYW1lIjoiWGF2aWVyIiwiZXhwIjoxNjcwNDk2NDYzLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQwMDAiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQwMDAifQ.e7GodJrefVPxDdWqQ9EnPfNKjNx7GNfZF0CcG7kxRrI"
+                    "value": "Bearer "
                 }
             ],
             "params": [],
@@ -75,7 +75,7 @@
             "headers": [
                 {
                     "name": "Authorization",
-                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjYzOTE3ZTI2NTcxOTIzZGEwODhkZGE5YiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJYYXZpZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ4YWd1em1hbkBnbWFpbC5jb20iLCJ1aWQiOiI2MzkxN2UyNjU3MTkyM2RhMDg4ZGRhOWIiLCJuYW1lIjoiWGF2aWVyIiwiZXhwIjoxNjcwNTQ0NjE0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAifQ.mk-gSI37mS_WMJpSCm-tVt7iv6pdjK2885dBqRuus5M"
+                    "value": "Bearer "
                 }
             ],
             "params": [],
@@ -94,7 +94,7 @@
             "headers": [
                 {
                     "name": "Authorization",
-                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjYzOTE3ZTI2NTcxOTIzZGEwODhkZGE5YiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJYYXZpZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ4YWd1em1hbkBnbWFpbC5jb20iLCJ1aWQiOiI2MzkxN2UyNjU3MTkyM2RhMDg4ZGRhOWIiLCJuYW1lIjoiWGF2aWVyIiwiZXhwIjoxNjcwNTQ0NjE0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAifQ.mk-gSI37mS_WMJpSCm-tVt7iv6pdjK2885dBqRuus5M"
+                    "value": "Bearer "
                 }
             ],
             "params": [],
@@ -113,7 +113,7 @@
             "headers": [
                 {
                     "name": "Authorization",
-                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjYzOTE3ZTI2NTcxOTIzZGEwODhkZGE5YiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJYYXZpZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ4YWd1em1hbkBnbWFpbC5jb20iLCJ1aWQiOiI2MzkxN2UyNjU3MTkyM2RhMDg4ZGRhOWIiLCJuYW1lIjoiWGF2aWVyIiwiZXhwIjoxNjcwNTQ0NjE0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAifQ.mk-gSI37mS_WMJpSCm-tVt7iv6pdjK2885dBqRuus5M"
+                    "value": "Bearer "
                 }
             ],
             "params": [],
@@ -132,7 +132,7 @@
             "headers": [
                 {
                     "name": "Authorization",
-                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjYzOTE3ZTI2NTcxOTIzZGEwODhkZGE5YiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJYYXZpZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ4YWd1em1hbkBnbWFpbC5jb20iLCJ1aWQiOiI2MzkxN2UyNjU3MTkyM2RhMDg4ZGRhOWIiLCJuYW1lIjoiWGF2aWVyIiwiZXhwIjoxNjcwNTQ0NjE0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjUwMDAiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAifQ.mk-gSI37mS_WMJpSCm-tVt7iv6pdjK2885dBqRuus5M"
+                    "value": "Bearer "
                 }
             ],
             "params": [],

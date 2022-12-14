@@ -33,9 +33,9 @@ internal class EventRoutes
 
     public async Task<IResult> GetEvents(HttpContext ctx, EventsService eventsService)
     {
-        var userId = ctx.User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value;
+        // var userId = ctx.User.Claims.First(x => x.Type == ClaimTypes.NameIdentifier).Value;
 
-        var events = await eventsService.GetViewAllAsync(x => x.UserId == userId);
+        var events = await eventsService.GetViewAllAsync();
 
         return Results.Json(
             new
