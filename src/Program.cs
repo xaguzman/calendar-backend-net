@@ -56,7 +56,11 @@ var app = builder.Build();
 var convention = new ConventionPack{ new CamelCaseElementNameConvention() };
 ConventionRegistry.Register("camelCase", convention, t => true);
 
-
+app.MapGet("/hearthbeat", (UsersService serv) => {
+    var ignoredResult = serv.GetAsync( x => x.Email == "someEmail@gmail.com" );
+    
+    return Results.Ok();
+});
 app.MapApi();
 
 app.UseCors("EnableCORS");
