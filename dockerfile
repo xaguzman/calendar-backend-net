@@ -16,4 +16,4 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0-alpine
 WORKDIR /app
 COPY --from=build /app .
 # ENTRYPOINT ["dotnet", "calendar-backend-net.dll"]
-CMD ["dotnet", "calendar-backend-net.dll"]
+CMD ["dotnet", "calendar-backend-net.dll", "--environment=Production"]

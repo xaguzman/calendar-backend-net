@@ -43,11 +43,11 @@ builder.Services.AddAuthorizationBuilder().AddPolicy("user_logged", policy => po
 builder.Services.AddCors(o =>
 {
     o.AddPolicy("EnableCORS", builder => builder
-            // .AllowAnyOrigin()
+            .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .AllowCredentials()
-            .WithOrigins("http://localhost:5000", "http://localhost:3000")
+            // .AllowCredentials()
+            // .WithOrigins("http://localhost:5000", "http://localhost:3000")
         );
 });
 
